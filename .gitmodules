@@ -1,3 +1,0 @@
-[submodule "netlify/plugins/demo-restaurant-data-contentful"]
-	path = netlify/plugins/demo-restaurant-data-contentful
-	url = https://github.com/netlify/demo-restaurant-data-contentful
