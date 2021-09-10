@@ -1,0 +1,6 @@
+node_modules/
+# Local Netlify folder
+.netlify/
+out/
+netlify/plugins/
+.next/
