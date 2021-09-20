@@ -3,6 +3,12 @@ import Nav from "@components/Nav";
 import menu from "../data/menu.json";
 
 export default function Menu() {
+  const displayCategory = (cat) => {
+    if (cat.length > 1) {
+      return <h3>{cat.join(" & ")}</h3>;
+    }
+    return <h3>{cat}</h3>;
+  };
   return (
     <div className="container">
       <Head>
@@ -14,19 +20,18 @@ export default function Menu() {
         <Nav />
         <div className="menu">
           {menu.map((p) => {
-            return p.category.map((category) => {
-              return (
-                <section>
-                  <h3>{category}</h3>
-                  <p>
-                    {p.currency}
-                    {p.price}
-                  </p>
-                  <p>{p.title}</p>
-                  <p>{p.description}</p>
-                </section>
-              );
-            });
+            return (
+              <section key={p.title}>
+                {displayCategory(p.category)}
+
+                <p>
+                  {p.currency}
+                  {p.price}
+                </p>
+                <p>{p.title}</p>
+                <p>{p.description}</p>
+              </section>
+            );
           })}
         </div>
       </main>
