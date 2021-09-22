@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Nav from "@components/Nav";
 import menu from "../data/menu.json";
+import gallery from "../data/gallery.json";
+import pages from "../data/pages.json";
 
 const dietsMapping = {
   vegan: "vegan",
@@ -36,23 +38,33 @@ export default function Menu() {
 
       <main>
         <Nav />
+        <section>{pages.menu.description}</section>
         <div className="menu">
           {menu.map((p) => {
             return (
               <section key={p.title}>
                 {displayCategory(p.category)}
-                <h2>{p.title}</h2>
+
                 <p>
                   {p.currency}
-                  {p.price}
+                  {p.price} {p.title}
                 </p>
                 <p>{p.description}</p>
                 <p>{dietaryOptions(p.dietary)}</p>
+                {gallery.map((img) => (
+                  <img key={img.caption} src={img.imageUrl} alt={img.caption} />
+                ))}
               </section>
             );
           })}
         </div>
       </main>
+
+      <style jsx>{`
+        img {
+          width: 40%;
+        }
+      `}</style>
     </div>
   );
 }

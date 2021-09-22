@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "contentful": "^7.14.6",
-    "@netlify/demo-restaurant-sites-data": "^0.1.0",
+    "@netlify/demo-restaurant-sites-data": "^0.3.1",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
