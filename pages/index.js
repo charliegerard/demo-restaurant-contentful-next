@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-import RestaurantInfo from "@components/RestaurantInfo";
-import Nav from "@components/Nav";
 import FeaturedItems from "@components/FeaturedItems";
 import Testimonials from "@components/Testimonials";
+
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
@@ -13,12 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Nav />
-        <RestaurantInfo />
+      <Layout>
         <FeaturedItems />
         <Testimonials />
-      </main>
+      </Layout>
     </div>
   );
 }

@@ -1,47 +1,42 @@
 import Link from "next/link";
+import RestaurantInfo from "@components/RestaurantInfo";
 
 export default function Nav() {
   return (
     <nav className="container">
-      <section className="left-block">
+      <RestaurantInfo />
+      <section className="nav-links">
         <Link href="/">
           <a>Home</a>
         </Link>
         <Link href="/menu">
           <a>Menu</a>
         </Link>
-      </section>
-
-      <section className="right-block">
-        <Link href="/">
-          <a>Testimonials</a>
+        <Link href="/about">
+          <a>About</a>
         </Link>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-        <Link href="/order-now">
-          <a>Order now</a>
+        <Link href="/gallery">
+          <a>Gallery</a>
         </Link>
       </section>
 
       <style jsx>{`
-        .container {
-          height: 10vh;
-          padding: 1em;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
+        // .container {
+        //   height: 10vh;
+        //   padding: 1em;
+        //   display: flex;
+        //   flex-direction: row;
+        //   align-items: center;
+        //   justify-content: space-between;
+        //   border-right: 2px solid black;
+        // }
 
-        .left-block,
-        .right-block {
-          width: fit-content;
-          display: inline-flex;
+        .container {
+          border-right: 1px solid black;
         }
 
         a {
-          margin-right: 1em;
+          display: block;
         }
       `}</style>
 

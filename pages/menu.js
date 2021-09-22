@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Nav from "@components/Nav";
+import Layout from "../components/Layout";
 import menu from "../data/menu.json";
 import gallery from "../data/gallery.json";
 import pages from "../data/pages.json";
@@ -36,8 +36,7 @@ export default function Menu() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Nav />
+      <Layout>
         <section>{pages.menu.description}</section>
         <div className="menu">
           {menu.map((p) => {
@@ -58,7 +57,7 @@ export default function Menu() {
             );
           })}
         </div>
-      </main>
+      </Layout>
 
       <style jsx>{`
         img {
