@@ -9,8 +9,9 @@
     "export": "next export"
   },
   "dependencies": {
-    "contentful": "^7.14.6",
     "@netlify/demo-restaurant-sites-data": "^0.3.1",
+    "contentful": "^7.14.6",
+    "contentfull-belly-styles": "0.1.0-alpha",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
