@@ -1,4 +1,3 @@
-import Nav from "@components/Nav";
 import Sidebar from "@components/Sidebar";
 import "../node_modules/contentfull-belly-styles/styles.css";
 

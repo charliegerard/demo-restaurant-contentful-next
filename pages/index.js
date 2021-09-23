@@ -18,8 +18,8 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <FeaturedItems />
-        <Testimonials />
+        {/* <FeaturedItems /> */}
+        {/* <Testimonials /> */}
       </Layout>
     </div>
   );

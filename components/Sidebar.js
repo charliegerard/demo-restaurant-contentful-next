@@ -8,8 +8,18 @@ export default function Sidebar() {
       <img src="/logo.svg" alt="" />
       <Nav />
       <footer className="main-footer">
-        <p className="built-with-text">Built with Vue 3 and Netlify</p>
+        <p className="built-with-text">Built with Next.js and Netlify</p>
       </footer>
+      <style jsx>{`
+        .sidebar {
+          display: grid;
+          align-items: center;
+          grid-template-rows: 200px 1fr 75px;
+        }
+        .main-footer {
+          align-self: end;
+        }
+      `}</style>
     </aside>
   );
 }
