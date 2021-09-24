@@ -18,22 +18,20 @@ export default function MenuItem({ data }) {
   return (
     <section key={data.title}>
       {displayCategory(data.category)}
-
-      <h3 className="menu-item-title">{data.title}</h3>
-
-      <span className="menu-item-price">
-        {data.currency}
-        {data.price}
-      </span>
-      <ul className="menu-item-diet">
-        <li>{dietaryOptions(data.dietary)}</li>
-      </ul>
+      <div className="menu-item-header">
+        <h3 className="menu-item-title">{data.title}</h3>
+        <span className="menu-item-price">
+          {data.currency}
+          {data.price}
+        </span>
+        <ul className="menu-item-diet">
+          <li>{dietaryOptions(data.dietary)}</li>
+        </ul>
+      </div>
       <p>{data.description}</p>
-
       {gallery.map((img) => (
         <img key={img.caption} src={img.imageUrl} alt={img.caption} />
       ))}
-
       <style jsx>{`
         .menu-item-description {
           margin: 0;
@@ -62,6 +60,10 @@ export default function MenuItem({ data }) {
         .menu-item-title {
           margin: 0;
           font-size: 20px;
+        }
+
+        img {
+          width: 40%;
         }
       `}</style>
     </section>
