@@ -1,13 +1,5 @@
-import Link from "next/link";
-import RestaurantInfo from "@components/RestaurantInfo";
-import Nav from "@components/Nav";
+import DietIcon from "./DietIcon";
 import gallery from "../data/gallery.json";
-
-const dietsMapping = {
-  vegan: "vegan",
-  vegetarian: "vegetarian",
-  glutenFree: "gluten free",
-};
 
 export default function MenuItem({ data }) {
   const displayCategory = (cat) => {
@@ -18,26 +10,26 @@ export default function MenuItem({ data }) {
   };
 
   const dietaryOptions = (diets) => {
-    const dietOptions = Object.entries(diets).reduce((acc, item) => {
-      if (item[1]) {
-        acc.push(item[0]);
-      }
-      return acc;
-    }, []);
-
-    return dietOptions.map((d) => dietsMapping[d]).join(" ");
+    return Object.keys(diets)
+      .filter((d) => diets[d])
+      .map((t) => <DietIcon type={t} />);
   };
 
   return (
     <section key={data.title}>
       {displayCategory(data.category)}
 
-      <p>
+      <h3 className="menu-item-title">{data.title}</h3>
+
+      <span className="menu-item-price">
         {data.currency}
-        {data.price} {data.title}
-      </p>
+        {data.price}
+      </span>
+      <ul className="menu-item-diet">
+        <li>{dietaryOptions(data.dietary)}</li>
+      </ul>
       <p>{data.description}</p>
-      <p>{dietaryOptions(data.dietary)}</p>
+
       {gallery.map((img) => (
         <img key={img.caption} src={img.imageUrl} alt={img.caption} />
       ))}
