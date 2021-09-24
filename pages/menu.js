@@ -5,31 +5,7 @@ import gallery from "../data/gallery.json";
 import pages from "../data/pages.json";
 import MenuItem from "@components/MenuItem";
 
-// const dietsMapping = {
-//   vegan: "vegan",
-//   vegetarian: "vegetarian",
-//   glutenFree: "gluten free",
-// };
-
 export default function Menu() {
-  // const displayCategory = (cat) => {
-  //   if (cat.length > 1) {
-  //     return <h1>{cat.join(" & ")}</h1>;
-  //   }
-  //   return <h1>{cat}</h1>;
-  // };
-
-  // const dietaryOptions = (diets) => {
-  //   const dietOptions = Object.entries(diets).reduce((acc, item) => {
-  //     if (item[1]) {
-  //       acc.push(item[0]);
-  //     }
-  //     return acc;
-  //   }, []);
-
-  //   return dietOptions.map((d) => dietsMapping[d]).join(" ");
-  // };
-
   return (
     <Layout>
       <main className="menu-page">
@@ -46,25 +22,9 @@ export default function Menu() {
 
         <h2 className="section-title">{pages.menu.description}</h2>
         <div className="menu">
-          {menu.map((p) => {
-            // return (
-            //   <section key={p.title}>
-            //     {displayCategory(p.category)}
-
-            //     <p>
-            //       {p.currency}
-            //       {p.price} {p.title}
-            //     </p>
-            //     <p>{p.description}</p>
-            //     <p>{dietaryOptions(p.dietary)}</p>
-            //     {gallery.map((img) => (
-            //       <img key={img.caption} src={img.imageUrl} alt={img.caption} />
-            //     ))}
-            //   </section>
-            // );
-
-            return <MenuItem data={p}></MenuItem>;
-          })}
+          {menu.map((p) => (
+            <MenuItem data={p}></MenuItem>
+          ))}
         </div>
 
         <style jsx>{`
