@@ -1,23 +1,25 @@
 import Link from "next/link";
-import RestaurantInfo from "@components/RestaurantInfo";
 import Nav from "@components/Nav";
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
-      <img src="/logo.svg" alt="" />
+      <Link href="/">
+        <img src="/logo.svg" alt="Restaurant logo" />
+      </Link>
+
       <Nav />
       <footer className="main-footer">
         <p className="built-with-text">Built with Next.js and Netlify</p>
       </footer>
-      <style jsx>{`
-        .sidebar {
-          display: grid;
-          align-items: center;
-          grid-template-rows: 200px 1fr 75px;
+
+      <style jsx global>{`
+        .sidebar img {
+          cursor: pointer;
         }
+
         .main-footer {
-          align-self: end;
+          text-align: center;
         }
       `}</style>
     </aside>

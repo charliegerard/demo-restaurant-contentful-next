@@ -1,4 +1,3 @@
-import Link from "next/link";
 import info from "../data/info.json";
 
 export default function RestaurantInfo() {
@@ -7,18 +6,14 @@ export default function RestaurantInfo() {
       <h1>{info.name}</h1>
       <section className="details">
         <p>Address: {info.contact.streetAddress.join(" ")}</p>
-        <p>
-          Hours:{" "}
-          {info.hours.map((h) => (
-            <ul>
-              <li>{h}</li>
-            </ul>
-          ))}
-        </p>
+        <p>Hours: </p>
+        {info.hours.map((h) => (
+          <ul key={`hour-${h}`}>
+            <li>{h}</li>
+          </ul>
+        ))}
         <p>Contact: {info.contact.phone}</p>
       </section>
-
-      <style jsx>{``}</style>
     </section>
   );
 }
