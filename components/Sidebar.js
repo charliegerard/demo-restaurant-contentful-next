@@ -18,6 +18,10 @@ export default function Sidebar() {
           cursor: pointer;
         }
 
+        .sidebar {
+          font-size: 14px;
+        }
+
         .main-footer {
           text-align: center;
         }

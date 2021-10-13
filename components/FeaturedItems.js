@@ -1,3 +1,55 @@
-export default function FeaturedItems() {
-  return <h2>Featured items</h2>;
+import gallery from "../data/gallery.json";
+
+export default function FeaturedItems({ title, subtitle }) {
+  const homepageImages = gallery.slice(0, 3);
+
+  const displayTitle = (id) => {
+    if (id === 0) {
+      return (
+        <section className="title">
+          <h2>{title}</h2>
+          <p>{subtitle}</p>
+        </section>
+      );
+    }
+  };
+
+  return (
+    <section>
+      {homepageImages.map((img, id) => {
+        return (
+          <div className="image-block">
+            {displayTitle(id)}
+            <img key={id} src={img.imageUrl} alt={img.caption} />
+          </div>
+        );
+      })}
+
+      <style jsx global>{`
+        .image-block {
+          position: relative;
+          display: flex;
+        }
+
+        .title {
+          color: white;
+          width: 70%;
+          height: 100vh;
+          position: absolute;
+          margin-top: 50vh;
+          z-index: 100;
+          padding-left: 40px;
+        }
+
+        .title h2 {
+          font-size: 40px;
+        }
+
+        img {
+          width: 100%;
+          filter: brightness(70%);
+        }
+      `}</style>
+    </section>
+  );
 }
