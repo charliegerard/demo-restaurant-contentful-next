@@ -7,13 +7,11 @@ import Layout from "../components/Layout";
 export default function Home() {
   return (
     <Layout>
-      {/* <div className="menu-page" key="Home"> */}
       <FeaturedItems
         title={pages.home.body}
         subtitle={pages.home.description}
       />
       {/* <Testimonials /> */}
-      {/* </div> */}
     </Layout>
   );
 }

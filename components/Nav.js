@@ -7,7 +7,6 @@ export default function Nav() {
       <RestaurantInfo />
       <ul className="main-nav-list">
         <NavItem text="Menu" />
-        <NavItem text="Gallery" />
       </ul>
     </nav>
   );

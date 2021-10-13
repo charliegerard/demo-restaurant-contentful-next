@@ -1,7 +1,7 @@
 import gallery from "../data/gallery.json";
 
 export default function FeaturedItems({ title, subtitle }) {
-  const homepageImages = gallery.slice(0, 3);
+  const homepageImages = gallery.slice(0, 4);
 
   const displayTitle = (id) => {
     if (id === 0) {
@@ -15,17 +15,26 @@ export default function FeaturedItems({ title, subtitle }) {
   };
 
   return (
-    <section>
+    <section className="featured-item">
       {homepageImages.map((img, id) => {
         return (
-          <div className="image-block">
+          <div className={`image-block`} key={id}>
             {displayTitle(id)}
-            <img key={id} src={img.imageUrl} alt={img.caption} />
+            <img src={img.imageUrl} alt={img.caption} />
           </div>
         );
       })}
 
       <style jsx global>{`
+        .featured-item {
+          display: grid;
+          grid-template-areas:
+            "head head"
+            "main nav";
+          grid-template-rows: 90vh 1fr;
+          grid-template-columns: 1fr 1fr;
+        }
+
         .image-block {
           position: relative;
           display: flex;
