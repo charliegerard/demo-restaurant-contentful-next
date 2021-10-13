@@ -4,15 +4,14 @@
 
 This is a [Next.js](https://nextjs.org/) v10.6.0 starter demo project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://url.netlify.com/Bk4UicocL)!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/charliegerard/demo-restaurant-contentful-next)
-
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
-
 ## Installation options
 
 **Option one:** One-click deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/charliegerard/demo-restaurant-contentful-next)
+
+(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+
 
 **Option two:** Manual clone
 
