@@ -12,7 +12,7 @@ export default function Sidebar() {
       <footer className="main-footer">
         <p class="main-footer-text">
           Repo:{" "}
-          <a href="https://github.com/bencodezen/demo-restaurant-vue3-ts-contentful">
+          <a href="https://github.com/charliegerard/demo-restaurant-contentful-next">
             GitHub
           </a>
         </p>
