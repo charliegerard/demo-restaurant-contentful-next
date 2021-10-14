@@ -10,14 +10,19 @@ export default function Sidebar() {
 
       <Nav />
       <footer className="main-footer">
-        <p className="built-with-text">Built with Next.js and Netlify</p>
+        <p class="main-footer-text">
+          Repo:{" "}
+          <a href="https://github.com/bencodezen/demo-restaurant-vue3-ts-contentful">
+            GitHub
+          </a>
+        </p>
+        <p class="main-footer-text">
+          Built with <a href="https://nextjs.org/">Next.js</a> and{" "}
+          <a href="https://www.netlify.com">Netlify</a>
+        </p>
       </footer>
 
       <style jsx global>{`
-        .sidebar img {
-          cursor: pointer;
-        }
-
         .sidebar {
           font-size: 14px;
         }

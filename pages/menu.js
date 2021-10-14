@@ -24,7 +24,7 @@ export default function Menu() {
   return (
     <Layout>
       <main className="menu-page" key="Menu">
-        <h2 className="section-title">{pages.menu.description}</h2>
+        <h1 className="section-title">{pages.menu.description}</h1>
 
         {Object.entries(getCategories()).map((category, id) => {
           return (

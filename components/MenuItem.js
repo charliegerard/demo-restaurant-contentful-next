@@ -8,9 +8,9 @@ export default function MenuItem({ data }) {
   };
 
   return (
-    <section key={data.title}>
+    <section key={data.title} className="menu-item">
       <div className="menu-item-header">
-        <h3 className="menu-item-title">{data.title}</h3>
+        <h2 className="menu-item-title">{data.title}</h2>
         <span className="menu-item-price">
           {data.currency}
           {data.price}
@@ -19,17 +19,13 @@ export default function MenuItem({ data }) {
           <li>{dietaryOptions(data.dietary)}</li>
         </ul>
       </div>
-      <p>{data.description}</p>
+      <p className="menu-item-description">{data.description}</p>
 
       <img src={data.photo.imageUrl} alt={data.photo.caption} />
 
       <style jsx>{`
         img {
           width: 40%;
-        }
-
-        .menu-item-diet li {
-          display: flex;
         }
       `}</style>
     </section>

@@ -11,7 +11,7 @@ export default function Home() {
         title={pages.home.body}
         subtitle={pages.home.description}
       />
-      {/* <Testimonials /> */}
+      <Testimonials />
     </Layout>
   );
 }

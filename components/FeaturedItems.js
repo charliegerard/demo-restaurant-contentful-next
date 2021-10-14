@@ -18,7 +18,7 @@ export default function FeaturedItems({ title, subtitle }) {
     <section className="featured-item">
       {homepageImages.map((img, id) => {
         return (
-          <div className={`image-block`} key={id}>
+          <div className="image-block" key={id}>
             {displayTitle(id)}
             <img src={img.imageUrl} alt={img.caption} />
           </div>
@@ -54,7 +54,7 @@ export default function FeaturedItems({ title, subtitle }) {
           font-size: 40px;
         }
 
-        img {
+        .image-block img {
           width: 100%;
           filter: brightness(70%);
         }
