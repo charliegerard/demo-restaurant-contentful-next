@@ -10,8 +10,8 @@ export default function RestaurantInfo() {
       </section>
 
       <h1>Hours: </h1>
-      {info.hours.map((h) => (
-        <ul key={`hour-${h}`}>
+      {info.hours.map((h, i) => (
+        <ul key={i}>
           <li>{h}</li>
         </ul>
       ))}

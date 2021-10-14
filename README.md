@@ -4,6 +4,8 @@
 
 This is a [Next.js](https://nextjs.org/) v11.1.2 starter demo project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://www.netlify.com)!
 
+You can check out the [live demo](https://demo-restaurant-contentful-next.netlify.app/) if you'd like!
+
 ## Installation options
 
 **Option one:** One-click deploy

@@ -10,13 +10,13 @@ export default function Sidebar() {
 
       <Nav />
       <footer className="main-footer">
-        <p class="main-footer-text">
+        <p className="main-footer-text">
           Repo:{" "}
           <a href="https://github.com/charliegerard/demo-restaurant-contentful-next">
             GitHub
           </a>
         </p>
-        <p class="main-footer-text">
+        <p className="main-footer-text">
           Built with <a href="https://nextjs.org/">Next.js</a> and{" "}
           <a href="https://www.netlify.com">Netlify</a>
         </p>
