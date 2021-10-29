@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/52895d39-f3d0-43e2-8e3c-db0b7f1172b6/deploy-status)](https://app.netlify.com/sites/demo-restaurant-contentful-next/deploys)
 
-This is a [Next.js](https://nextjs.org/) v11.1.2 starter demo project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://www.netlify.com)!
+This is a [Next.js](https://nextjs.org/) v12.0.1 starter demo project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://www.netlify.com)!
 
 You can check out the [live demo](https://demo-restaurant-contentful-next.netlify.app/) if you'd like!
 
